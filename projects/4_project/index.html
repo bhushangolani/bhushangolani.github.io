@@ -40,23 +40,23 @@
 
       <h2>Data and Preprocessing</h2>
       <figure class="project-figure">
-        <img src="/assets/projects/cardiac-1.png" alt="e-Stethoscope cardiac anomaly detection">
-        <figcaption>Cardiac anomaly detection system overview</figcaption>
+        <img src="/assets/projects/cardiac-1.png" alt="e-Stethoscope data and preprocessing">
+        <figcaption>Data and preprocessing pipeline overview</figcaption>
       </figure>
       <p>
         Heart sound recordings were collected from digital stethoscopes and preprocessed for model input. I applied spectrogram representations and Mel Frequency Cepstral Coefficients (MFCCs) for feature extraction so that both time-frequency structure and perceptual spectral features were available to the model. This preprocessing step was critical for capturing the discriminative information in heart sounds while controlling dimensionality.
       </p>
 
       <h2>Model and Training</h2>
+      <figure class="project-figure">
+        <img src="/assets/projects/cardiac-2.png" alt="e-Stethoscope model and training pipeline">
+        <figcaption>End-to-end pipeline: user auth, audio capture and processing, ML model inference, and user report</figcaption>
+      </figure>
       <p>
         I used convolutional neural networks to learn from the extracted features and classify segments into normal or anomalous categories. The CNN architecture was designed to capture local patterns in the spectrogram or MFCC maps and to scale to the size of the dataset. Training was conducted with standard practices for data splitting, validation, and regularization to avoid overfitting.
       </p>
 
       <h2>Results</h2>
-      <figure class="project-figure">
-        <img src="/assets/projects/cardiac-2.png" alt="e-Stethoscope results and metrics">
-        <figcaption>Classification results and evaluation</figcaption>
-      </figure>
       <p>
         The system achieved 82.08% accuracy on the heart sound classification task, demonstrating that automated cardiac anomaly detection from stethoscope audio is feasible with deep learning. The work contributes to the broader goal of low-cost, accessible screening tools that can support clinicians and reduce reliance on specialized equipment in resource-constrained settings.
       </p>
