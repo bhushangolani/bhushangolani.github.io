@@ -1,13 +1,13 @@
 :root {
-  --primary: #2c3e50;
-  --accent: #3498db;
-  --accent-dark: #2980b9;
-  --text: #333;
-  --text-light: #666;
-  --bg: #fff;
-  --bg-alt: #f8f9fa;
-  --border: #e9ecef;
-  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --primary: #f0f0f0;
+  --accent: #6eb5e0;
+  --accent-dark: #5a9fc9;
+  --text: #e0e0e0;
+  --text-light: #a0a0a0;
+  --bg: #0d0d0d;
+  --bg-alt: #1a1a1a;
+  --border: #2a2a2a;
+  --shadow: 0 2px 12px rgba(0,0,0,0.4);
   --radius: 8px;
   --max-width: 960px;
   --transition: 0.2s ease;
@@ -55,7 +55,7 @@ a:hover {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.95);
+  background: rgba(13,13,13,0.98);
 }
 
 .nav-container {
@@ -132,6 +132,10 @@ a:hover {
   transition: all var(--transition);
 }
 
+.nav-brand .nav-emoji {
+  margin-right: 6px;
+}
+
 /* ── Hero ── */
 .hero {
   padding: 64px 0 48px;
@@ -193,9 +197,9 @@ a:hover {
 
 .social-links a:hover {
   background: var(--accent);
-  color: #fff;
+  color: #0d0d0d;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(52,152,219,0.3);
+  box-shadow: 0 4px 12px rgba(110,181,224,0.3);
 }
 
 .hero-image {
@@ -416,12 +420,12 @@ a:hover {
 
 .btn-github {
   background: var(--primary);
-  color: #fff;
+  color: #0d0d0d;
 }
 
 .btn-github:hover {
   background: var(--accent);
-  color: #fff;
+  color: #0d0d0d;
 }
 
 /* ── Publications ── */
@@ -484,9 +488,9 @@ a:hover {
 
 .cv-download:hover {
   background: var(--accent-dark);
-  color: #fff;
+  color: #0d0d0d;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(52,152,219,0.3);
+  box-shadow: 0 4px 12px rgba(110,181,224,0.3);
 }
 
 .cv-block {
@@ -685,7 +689,7 @@ footer p {
     top: 60px;
     left: 0;
     right: 0;
-    background: var(--bg);
+    background: rgba(13,13,13,0.98);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     padding: 16px 24px;
