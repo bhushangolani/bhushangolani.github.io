@@ -326,6 +326,26 @@ a:hover {
   margin-top: 28px;
 }
 
+.project-page-content .project-figure {
+  margin: 0 0 24px 0;
+  max-width: 100%;
+}
+
+.project-page-content .project-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.project-page-content .project-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 8px;
+  font-style: italic;
+}
+
 /* Project category sections (Vivek-style) */
 .project-category {
   font-size: 1.35rem;
@@ -374,6 +394,15 @@ a:hover {
   font-size: 3rem;
   color: rgba(255,255,255,0.9);
   flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .project-thumbnail.agentic { background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%); }
