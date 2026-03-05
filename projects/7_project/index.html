@@ -34,10 +34,6 @@
     </div>
 
     <div class="project-page-content">
-      <figure class="project-figure">
-        <img src="/assets/projects/line-detection.jpg" alt="Line detection in engineering drawings">
-        <figcaption>Detected solid and dashed lines in an engineering drawing</figcaption>
-      </figure>
       <p>
         A <strong>computer vision</strong> pipeline to digitize scanned engineering drawing papers by detecting and classifying <strong>solid</strong> and <strong>dashed</strong> lines after removing the background mesh or grid. Built with OpenCV and Python for a project under Prof. Kaushal Bhagat (IIT Kharagpur).
       </p>
@@ -48,6 +44,10 @@
       </p>
 
       <h2>Pipeline</h2>
+      <figure class="project-figure">
+        <img src="/assets/projects/line-detection.jpg" alt="Line detection in engineering drawings">
+        <figcaption>Detected solid and dashed lines in an engineering drawing</figcaption>
+      </figure>
       <p>
         The pipeline loads and preprocesses the image, crops and splits it into question and answer regions, applies K-means (K=2) on pixel intensities in the question region to segment and remove the mesh, uses threshold-based cleanup in the answer region, then merges and binarizes. Gaussian blur and <strong>Canny edge detection</strong> with auto-computed thresholds follow; morphological operations (dilate and erode) reduce noise and connect broken edges. The <strong>Probabilistic Hough Line Transform</strong> detects line segments and classifies them by length (long → solid, short → dashed), with output drawn as solid lines in red and dashed in green.
       </p>

@@ -34,15 +34,15 @@
     </div>
 
     <div class="project-page-content">
-      <figure class="project-figure">
-        <img src="/assets/projects/gpt-sft.png" alt="GPT-style model and SFT pipeline">
-        <figcaption>GPT architecture and supervised fine-tuning pipeline</figcaption>
-      </figure>
       <p>
         I implemented a GPT-style decoder-only transformer in PyTorch from scratch, including multi-head causal self-attention, Rotary Position Embeddings (RoPE), SwiGLU feed-forward layers, and RMSNorm. The goal was to pretrain the model on web text and then fine-tune it for conversational responses using supervised fine-tuning (SFT) with selective loss masking.
       </p>
 
       <h2>Model Architecture</h2>
+      <figure class="project-figure">
+        <img src="/assets/projects/gpt-sft.png" alt="GPT-style model and SFT pipeline">
+        <figcaption>GPT architecture and supervised fine-tuning pipeline</figcaption>
+      </figure>
       <p>
         The model uses token embeddings only (no separate positional embedding layer). Position is encoded in the attention mechanism via RoPE, which rotates query and key vectors as a function of position and improves length generalization. Each transformer block consists of multi-head causal self-attention with RoPE, followed by a feed-forward network using the SwiGLU gated activation (main path times Swish of gate path). Layer normalization is RMSNorm. The decoder is autoregressive with a causal mask so that each token can attend only to previous tokens.
       </p>
