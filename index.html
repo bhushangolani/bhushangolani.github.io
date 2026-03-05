@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">about</a></li>
+        <li><a href="projects.html">projects</a></li>
+        <li><a href="publications.html">publications</a></li>
+        <li><a href="cv.html">cv</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Bhushan Raju Golani</h1>
+          <p class="tagline">AI Research Engineer &middot; ex-Amazon SDE &middot; MS Data Science @ UMich</p>
+          <div class="hero-about">
+            <p>
+              I am a first-year Master's student in Data Science at the
+              <a href="https://umich.edu/" target="_blank">University of Michigan, Ann Arbor</a>.
+              I currently work as an AI Research Engineer with
+              <a href="https://mcdb.umich.edu/people/scott-pletcher/" target="_blank">Prof. Scott Pletcher</a>,
+              building multi-agent AI platforms and RAG systems.
+            </p>
+            <p>
+              My research interests lie in <strong>Natural Language Processing</strong>,
+              <strong>Machine Learning</strong>, and <strong>Large Language Models</strong>.
+              I enjoy building scalable AI systems, from training transformers from scratch
+              to designing safety benchmarks for child-facing LLMs.
+            </p>
+            <p>
+              Prior to UMich, I spent two years at
+              <a href="https://www.amazon.com/" target="_blank">Amazon</a>
+              on the Alexa Sensitive Content Intelligence team, building highly scalable
+              cloud services and LLM-powered classification systems. I graduated with a
+              dual B.Tech &amp; M.Tech in Mechanical Engineering (Minor in Computer Science)
+              from <a href="https://www.iitkgp.ac.in/" target="_blank">IIT Kharagpur</a>.
+            </p>
+            <p>
+              I am currently looking for <strong>full-time opportunities</strong> in AI/ML engineering
+              and research. Please reach out if you are hiring!
+            </p>
+          </div>
+          <div class="social-links">
+            <a href="mailto:brgolani@umich.edu" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/bhushangolani" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/bhushan-golani" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="profile-placeholder">
+            <i class="fas fa-user"></i>
+            <span>Add your<br>photo here</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-section">
+      <h2>news</h2>
+      <div class="news-list">
+        <div class="news-item">
+          <span class="news-date">Aug 2025</span>
+          <span class="news-text">Started my Master's degree in Data Science at the University of Michigan, Ann Arbor.</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Jul 2025</span>
+          <span class="news-text">Joined Prof. Scott Pletcher's lab as an AI Research Engineer at UMich.</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Jul 2023</span>
+          <span class="news-text">Joined Amazon as a Software Developer on the Alexa Sensitive Content Intelligence team.</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Jun 2023</span>
+          <span class="news-text">Published paper in <em>The Journal of Chemical Physics</em> &mdash; ML Hits Molecular Simulations.</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">May 2023</span>
+          <span class="news-text">Graduated with dual B.Tech &amp; M.Tech from IIT Kharagpur.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

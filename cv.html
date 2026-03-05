@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">about</a></li>
+        <li><a href="projects.html">projects</a></li>
+        <li><a href="publications.html">publications</a></li>
+        <li><a href="cv.html" class="active">cv</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>curriculum vitae</h1>
+    </div>
+
+    <div class="cv-section">
+      <a href="assets/Bhushan_Golani_Resume.pdf" class="cv-download" target="_blank">
+        <i class="fas fa-download"></i> Download Resume (PDF)
+      </a>
+
+      <div class="cv-block">
+        <h2>Education</h2>
+        <div class="cv-entry">
+          <h3>University of Michigan, Ann Arbor</h3>
+          <div class="cv-subtitle">Master of Science in Data Science</div>
+          <div class="cv-date">Aug 2025 &ndash; May 2027</div>
+          <ul>
+            <li>Coursework: Natural Language Processing, Deep Learning, Machine Learning, Database Management Systems</li>
+          </ul>
+        </div>
+        <div class="cv-entry">
+          <h3>Indian Institute of Technology (IIT), Kharagpur</h3>
+          <div class="cv-subtitle">B.Tech &amp; M.Tech in Mechanical Engineering (Minor in Computer Science) &middot; CGPA: 8.95/10</div>
+          <div class="cv-date">Jun 2018 &ndash; May 2023</div>
+          <ul>
+            <li>Coursework: Machine Learning, Computer Vision, Image Processing, Algorithms, Operating Systems</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <h2>Experience</h2>
+        <div class="cv-entry">
+          <h3>AI Research Engineer</h3>
+          <div class="cv-subtitle">University of Michigan &middot; Prof. Scott Pletcher</div>
+          <div class="cv-date">Jul 2025 &ndash; Present</div>
+          <ul>
+            <li>Architected a configuration-driven multi-agent AI platform unifying OpenAI, Anthropic, Gemini, DeepSeek, and Ollama behind a single agent interface.</li>
+            <li>Designed a ChromaDB vector database with contextual chunking, hybrid BM25+embedding search, reciprocal-rank fusion, and cross-encoder reranking.</li>
+            <li>Built a long-term conversation memory system with persistent ChromaDB store and semantic search over past sessions.</li>
+            <li>Developed a React-based UI and backend endpoints for interactive multi-agent conversations.</li>
+          </ul>
+        </div>
+        <div class="cv-entry">
+          <h3>Software Developer</h3>
+          <div class="cv-subtitle">Amazon &middot; Alexa Sensitive Content Intelligence Team</div>
+          <div class="cv-date">Jul 2023 &ndash; Jul 2025</div>
+          <ul>
+            <li>Developed scalable cloud services in Java using AWS Lambda, ECS, and DynamoDB, achieving 99.99% uptime and 50,000+ TPS.</li>
+            <li>Prompt-engineered a vision-enabled classification service using Amazon Bedrock (Claude Sonnet 3.5) for sentiment, compliance, and risk assessments.</li>
+            <li>Designed multimodal AI workflows integrating image retrieval and LLM reasoning with &lt;1s latency.</li>
+            <li>Built a ReactJS analytics app on ElasticSearch for data insights and feedback review.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Machine Learning</h4>
+            <p>PyTorch, TensorFlow, Scikit-learn, Hugging Face, Transformers, LangChain, Pandas, NumPy, OpenCV</p>
+          </div>
+          <div class="skill-category">
+            <h4>AI Technologies</h4>
+            <p>Large Language Models, Vector Databases (ChromaDB), Semantic Search, RAG Systems</p>
+          </div>
+          <div class="skill-category">
+            <h4>Programming</h4>
+            <p>Python, SQL, Java, C++, JavaScript, TypeScript, CUDA</p>
+          </div>
+          <div class="skill-category">
+            <h4>Cloud &amp; Tools</h4>
+            <p>AWS (SageMaker, Lambda, S3, ECS), Docker, Git, REST APIs, CI/CD, ElasticSearch</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
