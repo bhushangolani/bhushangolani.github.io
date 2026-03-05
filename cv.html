@@ -28,7 +28,7 @@
 
   <main class="container">
     <div class="page-header">
-      <h1>curriculum vitae</h1>
+      <h1>cv</h1>
     </div>
 
     <div class="cv-section">
@@ -36,52 +36,162 @@
         <i class="fas fa-download"></i> Download Resume (PDF)
       </a>
 
+      <!-- General Information -->
+      <div class="cv-block">
+        <h2>General Information</h2>
+        <table class="cv-general-table">
+          <tr><td><strong>Full Name</strong></td><td>Bhushan Raju Golani</td></tr>
+          <tr><td><strong>Location</strong></td><td>Ann Arbor, MI, USA</td></tr>
+          <tr><td><strong>Languages</strong></td><td>English, Hindi</td></tr>
+        </table>
+      </div>
+
+      <!-- Education -->
       <div class="cv-block">
         <h2>Education</h2>
-        <div class="cv-entry">
-          <h3>University of Michigan, Ann Arbor</h3>
-          <div class="cv-subtitle">Master of Science in Data Science</div>
-          <div class="cv-date">Aug 2025 &ndash; May 2027</div>
-          <ul>
-            <li>Coursework: Natural Language Processing, Deep Learning, Machine Learning, Database Management Systems</li>
-          </ul>
-        </div>
-        <div class="cv-entry">
-          <h3>Indian Institute of Technology (IIT), Kharagpur</h3>
-          <div class="cv-subtitle">B.Tech &amp; M.Tech in Mechanical Engineering (Minor in Computer Science) &middot; CGPA: 8.95/10</div>
-          <div class="cv-date">Jun 2018 &ndash; May 2023</div>
-          <ul>
-            <li>Coursework: Machine Learning, Computer Vision, Image Processing, Algorithms, Operating Systems</li>
-          </ul>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">Aug 2025 &ndash; May 2027</span>
+            <div class="cv-timeline-body">
+              <h3>Master of Science in Data Science</h3>
+              <p class="cv-timeline-place">University of Michigan, Ann Arbor, USA</p>
+              <ul>
+                <li>Relevant Coursework: Natural Language Processing, Deep Learning, Machine Learning, Database Management Systems</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">Jun 2018 &ndash; May 2023</span>
+            <div class="cv-timeline-body">
+              <h3>B.Tech &amp; M.Tech in Mechanical Engineering (Minor in Computer Science)</h3>
+              <p class="cv-timeline-place">Indian Institute of Technology (IIT), Kharagpur &middot; CGPA: 8.95/10</p>
+              <ul>
+                <li>Relevant Coursework: Machine Learning, Computer Vision, Image Processing, Algorithms, Operating Systems</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- Experience -->
       <div class="cv-block">
         <h2>Experience</h2>
-        <div class="cv-entry">
-          <h3>AI Research Engineer</h3>
-          <div class="cv-subtitle">University of Michigan &middot; Prof. Scott Pletcher</div>
-          <div class="cv-date">Jul 2025 &ndash; Present</div>
-          <ul>
-            <li>Architected a configuration-driven multi-agent AI platform unifying OpenAI, Anthropic, Gemini, DeepSeek, and Ollama behind a single agent interface.</li>
-            <li>Designed a ChromaDB vector database with contextual chunking, hybrid BM25+embedding search, reciprocal-rank fusion, and cross-encoder reranking.</li>
-            <li>Built a long-term conversation memory system with persistent ChromaDB store and semantic search over past sessions.</li>
-            <li>Developed a React-based UI and backend endpoints for interactive multi-agent conversations.</li>
-          </ul>
-        </div>
-        <div class="cv-entry">
-          <h3>Software Developer</h3>
-          <div class="cv-subtitle">Amazon &middot; Alexa Sensitive Content Intelligence Team</div>
-          <div class="cv-date">Jul 2023 &ndash; Jul 2025</div>
-          <ul>
-            <li>Developed scalable cloud services in Java using AWS Lambda, ECS, and DynamoDB, achieving 99.99% uptime and 50,000+ TPS.</li>
-            <li>Prompt-engineered a vision-enabled classification service using Amazon Bedrock (Claude Sonnet 3.5) for sentiment, compliance, and risk assessments.</li>
-            <li>Designed multimodal AI workflows integrating image retrieval and LLM reasoning with &lt;1s latency.</li>
-            <li>Built a ReactJS analytics app on ElasticSearch for data insights and feedback review.</li>
-          </ul>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">Jul 2025 &ndash; Present</span>
+            <div class="cv-timeline-body">
+              <h3>AI Research Engineer</h3>
+              <p class="cv-timeline-place">University of Michigan &middot; Prof. Scott Pletcher</p>
+              <ul>
+                <li>Architected a configuration-driven multi-agent AI platform unifying OpenAI, Anthropic, Gemini, DeepSeek, and Ollama behind a single agent interface.</li>
+                <li>Designed a ChromaDB vector database with contextual chunking, hybrid BM25+embedding search, reciprocal-rank fusion, and cross-encoder reranking.</li>
+                <li>Built a long-term conversation memory system with persistent ChromaDB store and semantic search over past sessions.</li>
+                <li>Developed a React-based UI and backend endpoints for interactive multi-agent conversations.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">Jul 2023 &ndash; Jul 2025</span>
+            <div class="cv-timeline-body">
+              <h3>Software Developer</h3>
+              <p class="cv-timeline-place">Amazon &middot; Alexa Sensitive Content Intelligence Team</p>
+              <ul>
+                <li>Developed scalable cloud services in Java using AWS Lambda, ECS, and DynamoDB, achieving 99.99% uptime and 50,000+ TPS.</li>
+                <li>Prompt-engineered a vision-enabled classification service using Amazon Bedrock (Claude Sonnet 3.5) for sentiment, compliance, and risk assessments.</li>
+                <li>Designed multimodal AI workflows integrating image retrieval and LLM reasoning with &lt;1s latency.</li>
+                <li>Built a ReactJS analytics app on ElasticSearch for data insights and feedback review.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">May 2022 &ndash; Jul 2022</span>
+            <div class="cv-timeline-body">
+              <h3>Software Engineer Intern</h3>
+              <p class="cv-timeline-place">Amazon &middot; In-Ads-Tech Team</p>
+              <ul>
+                <li>Configured an Event Driven System (EventBridge) to trigger API calls for remittance file retrieval.</li>
+                <li>Built Lambda-based microservices for file filtering and data extraction with &lt;1s latency and 99% uptime.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- Projects -->
+      <div class="cv-block">
+        <h2>Projects</h2>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">2025</span>
+            <div class="cv-timeline-body">
+              <h3>Child-Centered LLM Safety Evaluation &amp; Alignment</h3>
+              <p class="cv-timeline-place">CSE 595 Course Project</p>
+              <ul>
+                <li>Designed an end-to-end LLM safety pipeline for children (ages 6&ndash;12) with a human-verified dataset based on the 4Cs framework.</li>
+                <li>Benchmarked 10 open LLMs using GPT-5 as LLM-as-a-judge on safety, age-appropriateness, empathy, and boundary-setting.</li>
+                <li>Trained a safety classifier and applied DPO with GPT-5 gold answers for child-centered alignment.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">2025</span>
+            <div class="cv-timeline-body">
+              <h3>GPT-style Language Model &amp; Conversational SFT</h3>
+              <p class="cv-timeline-place">EECS 595 (NLP)</p>
+              <ul>
+                <li>Implemented a GPT-style transformer in PyTorch from scratch with RoPE, SwiGLU, RMSNorm, and multi-head causal self-attention.</li>
+                <li>Built a scalable pretraining pipeline on FineWeb-Edu and SFT framework for conversational agents with selective loss masking.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">2022 &ndash; 2023</span>
+            <div class="cv-timeline-body">
+              <h3>e-Stethoscope: Cardiac Anomaly Detection</h3>
+              <p class="cv-timeline-place">Master's Thesis &middot; IIT Kharagpur</p>
+              <ul>
+                <li>Architected a cardiac anomaly detection system using deep learning and audio from 5,000+ stethoscopes.</li>
+                <li>Preprocessed audio with spectrograms and MFCCs; achieved 82.08% accuracy with CNNs for heart sound classification.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Honors and Awards / Publications -->
+      <div class="cv-block">
+        <h2>Honors and Awards</h2>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">Jun 2023</span>
+            <div class="cv-timeline-body">
+              <h3>Publication &mdash; Journal of Chemical Physics</h3>
+              <p class="cv-timeline-place">Special Collection: Machine Learning Hits Molecular Simulations</p>
+              <ul>
+                <li>Mapping fluid structuration to flow enhancement in nanofluidic channels &mdash; physics-informed neural network models for flow enhancement prediction.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <span class="cv-timeline-date">Jul 2021</span>
+            <div class="cv-timeline-body">
+              <h3>Publication &mdash; IJERT</h3>
+              <p class="cv-timeline-place">International Journal of Engineering Research and Technology</p>
+              <ul>
+                <li>Prediction of Cloud Server Job Failures using ML-based KNN and LSTM &mdash; 94% accuracy for cloud job failure prediction.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Interests -->
+      <div class="cv-block">
+        <h2>Research Interests</h2>
+        <p class="cv-interests">Natural Language Processing, Large Language Models, Machine Learning, RAG Systems, Multimodal AI.</p>
+      </div>
+
+      <!-- Technical Skills -->
       <div class="cv-block">
         <h2>Technical Skills</h2>
         <div class="skills-grid">
@@ -102,6 +212,12 @@
             <p>AWS (SageMaker, Lambda, S3, ECS), Docker, Git, REST APIs, CI/CD, ElasticSearch</p>
           </div>
         </div>
+      </div>
+
+      <!-- Other Interests -->
+      <div class="cv-block">
+        <h2>Other Interests</h2>
+        <p class="cv-interests">Building side projects, reading, exploring new technologies.</p>
       </div>
     </div>
   </main>

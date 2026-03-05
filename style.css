@@ -498,6 +498,97 @@ a:hover {
   margin-bottom: 4px;
 }
 
+/* CV — General Information table (Vivek-style) */
+.cv-general-table {
+  width: 100%;
+  max-width: 480px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.cv-general-table td {
+  padding: 8px 12px 8px 0;
+  vertical-align: top;
+  color: var(--text);
+}
+
+.cv-general-table td:first-child {
+  width: 140px;
+  color: var(--text-light);
+}
+
+.cv-general-table strong {
+  color: var(--primary);
+}
+
+/* CV — Timeline layout (Vivek-style) */
+.cv-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cv-timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cv-timeline-item:last-child {
+  border-bottom: none;
+}
+
+.cv-timeline-date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.cv-timeline-body h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.cv-timeline-place {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.cv-timeline-body ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.cv-timeline-body li {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.cv-interests {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .cv-timeline-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .cv-timeline-date {
+    margin-bottom: 4px;
+  }
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
