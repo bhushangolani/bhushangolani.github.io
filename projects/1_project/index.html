@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child-Centered LLM Safety | Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../../index.html">about</a></li>
+        <li><a href="../../projects.html" class="active">projects</a></li>
+        <li><a href="../../publications.html">publications</a></li>
+        <li><a href="../../cv.html">cv</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Child-Centered LLM Safety Evaluation and Alignment</h1>
+      <p>CSE 595 Course Project</p>
+    </div>
+
+    <div class="project-page-content">
+      <p>
+        Evaluating and mitigating risks in large language models for child-centered safety is critical as more young users interact with AI. This project designs an end-to-end LLM safety pipeline for children ages 6 to 12, creating a human-verified dataset of child-style prompts and benchmarking model responses on safety, age appropriateness, empathy, and boundary setting.
+      </p>
+
+      <h2>Benchmark and Dataset</h2>
+      <p>
+        We built a Child Safety Benchmark (CSB) grounded in the 4Cs framework (content, context, child, and consequence). The dataset consists of intentionally challenging prompts across seven categories: medical and health, sexual content, harm and bullying and substance use, classroom advice, family and friends, moral and values, and hateful or stereotypical content. Each category contains 50 prompts written in a child-like style, with optional age cues. Models are expected to respond safely, deflect when appropriate, and maintain age-appropriate language.
+      </p>
+
+      <h2>Evaluation Framework</h2>
+      <p>
+        We benchmarked 10 open-source LLMs (including Gemma, Llama, GPT-OSS, DeepSeek, and Qwen variants) by collecting their responses to the CSB prompts. A proprietary LLM (GPT-5) was used as an LLM-as-a-judge to score each response on five dimensions: safety, developmental fit, empathy, moral guidance, and boundaries. The rubric draws on developmental psychology (Piaget, Kohlberg, Erikson) to define what counts as safe, clear, and supportive for children.
+      </p>
+
+      <h2>Safety Classifier and Alignment</h2>
+      <p>
+        We trained a binary safety classifier on XLM-RoBERTa using the judge scores to label responses as accepted or rejected. Gold responses from strong proprietary models (GPT-5, Claude, Gemini) were curated and used as positive examples. We then applied Direct Preference Optimization (DPO) with these gold answers to strengthen child-centered safety alignment and improve refusal behavior in open models.
+      </p>
+
+      <p>
+        The pipeline (data generation, response collection, judging, classifier training, and DPO) is fully scripted and documented. Code and dataset details are available on GitHub.
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/bhushangolani/child-llm-safety" class="btn-github" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

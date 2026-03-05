@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPT-style Language Model and Conversational SFT | Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../../index.html">about</a></li>
+        <li><a href="../../projects.html" class="active">projects</a></li>
+        <li><a href="../../publications.html">publications</a></li>
+        <li><a href="../../cv.html">cv</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>GPT-style Language Model and Conversational SFT</h1>
+      <p>EECS 595 Natural Language Processing</p>
+    </div>
+
+    <div class="project-page-content">
+      <p>
+        I implemented a GPT-style decoder-only transformer in PyTorch from scratch, including multi-head causal self-attention, Rotary Position Embeddings (RoPE), SwiGLU feed-forward layers, and RMSNorm. The goal was to pretrain the model on web text and then fine-tune it for conversational responses using supervised fine-tuning (SFT) with selective loss masking.
+      </p>
+
+      <h2>Model Architecture</h2>
+      <p>
+        The model uses token embeddings only (no separate positional embedding layer). Position is encoded in the attention mechanism via RoPE, which rotates query and key vectors as a function of position and improves length generalization. Each transformer block consists of multi-head causal self-attention with RoPE, followed by a feed-forward network using the SwiGLU gated activation (main path times Swish of gate path). Layer normalization is RMSNorm. The decoder is autoregressive with a causal mask so that each token can attend only to previous tokens.
+      </p>
+
+      <h2>Pretraining Pipeline</h2>
+      <p>
+        I built a scalable pretraining pipeline over the FineWeb-Edu dataset using Hugging Face Arrow datasets. Custom GPT dataset and data loader utilities support mixed precision (FP16 or bfloat16) and gradient accumulation for large effective batch sizes. Training uses a cosine learning rate schedule with warmup and gradient clipping. The pretrained model is trained with next-token prediction loss on contiguous text.
+      </p>
+
+      <h2>Supervised Fine-Tuning for Conversation</h2>
+      <p>
+        For conversational ability, I designed an SFT framework that formats dialogs with special tokens for user, assistant, and system roles. Only assistant responses are used for the loss (labels for user and system turns are masked with -100). The model is fine-tuned on a conversation dataset (e.g., SmolTalk) so that it learns to generate coherent, on-role replies. Evaluation is done on a held-out set of multiple-choice questions across topics to measure knowledge and reasoning after SFT.
+      </p>
+
+      <p>
+        All core components (embedding, attention with RoPE, SwiGLU, transformer block, full model, pretraining and SFT scripts) are implemented and tested with unit tests and debug notebooks. Code is available on GitHub.
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/bhushangolani/gpt-from-scratch" class="btn-github" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

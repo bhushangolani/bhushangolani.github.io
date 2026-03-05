@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-Stethoscope: Cardiac Anomaly Detection | Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../../index.html">about</a></li>
+        <li><a href="../../projects.html" class="active">projects</a></li>
+        <li><a href="../../publications.html">publications</a></li>
+        <li><a href="../../cv.html">cv</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>e-Stethoscope: Cardiac Anomaly Detection</h1>
+      <p>Master's Thesis, IIT Kharagpur</p>
+    </div>
+
+    <div class="project-page-content">
+      <p>
+        I architected a cardiac anomaly detection system that uses deep learning to classify heart sounds from digital stethoscope audio. The project applies machine learning to mechanical engineering and healthcare problems by turning raw auscultation signals into automated, interpretable predictions. The system was trained and evaluated on audio from over 5,000 stethoscope recordings.
+      </p>
+
+      <h2>Data and Preprocessing</h2>
+      <p>
+        Heart sound recordings were collected from digital stethoscopes and preprocessed for model input. I applied spectrogram representations and Mel Frequency Cepstral Coefficients (MFCCs) for feature extraction so that both time-frequency structure and perceptual spectral features were available to the model. This preprocessing step was critical for capturing the discriminative information in heart sounds while controlling dimensionality.
+      </p>
+
+      <h2>Model and Training</h2>
+      <p>
+        I used convolutional neural networks to learn from the extracted features and classify segments into normal or anomalous categories. The CNN architecture was designed to capture local patterns in the spectrogram or MFCC maps and to scale to the size of the dataset. Training was conducted with standard practices for data splitting, validation, and regularization to avoid overfitting.
+      </p>
+
+      <h2>Results</h2>
+      <p>
+        The system achieved 82.08% accuracy on the heart sound classification task, demonstrating that automated cardiac anomaly detection from stethoscope audio is feasible with deep learning. The work contributes to the broader goal of low-cost, accessible screening tools that can support clinicians and reduce reliance on specialized equipment in resource-constrained settings.
+      </p>
+
+      <p>
+        This project was completed as part of my Master's thesis at IIT Kharagpur under the guidance of Prof. Aditya Bandhopadyay, with a focus on machine learning applications to mechanical engineering and biomedical problems.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

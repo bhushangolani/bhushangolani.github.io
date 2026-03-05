@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Agent AI Platform | Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../../index.html">about</a></li>
+        <li><a href="../../projects.html" class="active">projects</a></li>
+        <li><a href="../../publications.html">publications</a></li>
+        <li><a href="../../cv.html">cv</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Multi-Agent AI Platform</h1>
+      <p>AI Research, University of Michigan</p>
+    </div>
+
+    <div class="project-page-content">
+      <p>
+        I architected a configuration-driven multi-agent AI platform that unifies multiple large language model providers (OpenAI, Anthropic, Gemini, DeepSeek, and Ollama) behind a single agent interface. The platform composes these models into specialized teams for scientific literature research, analysis, and synthesis, and is optimized for use cases such as grant application development and long-term research memory.
+      </p>
+
+      <h2>Unified Agent Interface</h2>
+      <p>
+        The system exposes one consistent agent API regardless of which backend model is used. Configuration files define which models are available and how they are composed into research teams, analysis teams, and writing teams. This allows the same application logic to run against different providers and model sizes without code changes.
+      </p>
+
+      <h2>Vector Database and Retrieval</h2>
+      <p>
+        I designed a ChromaDB-based vector database for knowledge management. It supports contextual chunking of documents, hybrid search combining BM25 and embedding similarity, reciprocal rank fusion to merge results, and cross-encoder reranking for better precision. Data sources include PubMed, web search results, and long-term conversation history so that agents can ground their responses in retrieved evidence.
+      </p>
+
+      <h2>Long-Term Conversation Memory</h2>
+      <p>
+        A dedicated subsystem streams chat history into a persistent ChromaDB store. Users can run semantic search over past sessions to recall earlier findings or context. This reduces the need to pack entire histories into the prompt and supports a continuous research workflow across sessions.
+      </p>
+
+      <h2>Interactive Interface</h2>
+      <p>
+        I developed a React-based web UI and backend endpoints (e.g., for chat and session finalization) so that researchers can interact with the multi-agent models through a browser. The interface supports starting conversations, viewing model outputs, and managing saved context and references.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
