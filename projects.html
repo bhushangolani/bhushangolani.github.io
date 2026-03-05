@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href="/assets/favicon.svg?v=1" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
   <nav class="navbar">
@@ -30,122 +30,148 @@
   <main class="container">
     <div class="page-header">
       <h1>Projects</h1>
-      <p>A selection of academic and research projects.</p>
+      <p>A selection of academic, research, and industry projects.</p>
     </div>
 
+    <!-- Agentic AI -->
+    <h2 class="project-category">Agentic AI</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="project-course">CSE 595 &middot; Course Project</div>
-        <h3><a href="projects/1_project/">Child-Centered LLM Safety Evaluation &amp; Alignment</a></h3>
-        <p>
-          An end-to-end LLM safety pipeline for children (ages 6&ndash;12). Built a human-verified
-          dataset of child-style prompts based on the 4Cs framework. Benchmarked 10 open LLMs using
-          GPT-5 as an LLM-as-a-judge, scoring responses on safety, age-appropriateness, empathy,
-          and boundary-setting. Trained a safety classifier using XLM-RoBERTa and applied DPO for
-          child-centered alignment.
-        </p>
-        <div class="project-tags">
-          <span>LLM Safety</span>
-          <span>NLP</span>
-          <span>DPO</span>
-          <span>PyTorch</span>
-          <span>Transformers</span>
-          <span>XLM-RoBERTa</span>
-        </div>
-        <div class="project-links">
-          <a href="projects/1_project/">Read more</a>
-          <a href="https://github.com/bhushangolani/child-llm-safety" class="btn-github" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-          </a>
+        <div class="project-thumbnail agentic"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
+        <div class="project-card-body">
+          <div class="project-course">CSE 595 &middot; Course Project</div>
+          <h3><a href="projects/1_project/">Child-Centered LLM Safety Evaluation &amp; Alignment</a></h3>
+          <p>End-to-end LLM safety pipeline for children (6&ndash;12). Human-verified dataset (4Cs), GPT-5 as judge, XLM-RoBERTa classifier, DPO alignment.</p>
+          <div class="project-tags">
+            <span>LLM Safety</span>
+            <span>NLP</span>
+            <span>DPO</span>
+            <span>PyTorch</span>
+          </div>
+          <div class="project-links">
+            <a href="projects/1_project/">Read more</a>
+            <a href="https://github.com/bhushangolani/child-llm-safety" class="btn-github" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
-
       <div class="project-card">
-        <div class="project-course">EECS 595 &middot; NLP</div>
-        <h3><a href="projects/2_project/">GPT-style Language Model &amp; Conversational SFT</a></h3>
-        <p>
-          Implemented a GPT-style transformer in PyTorch from scratch with multi-head causal
-          self-attention, Rotary Position Embeddings (RoPE), SwiGLU feed-forward layers, and RMSNorm.
-          Built a scalable pretraining pipeline on FineWeb-Edu and designed a supervised fine-tuning
-          (SFT) framework for conversational agents with selective loss masking.
-        </p>
-        <div class="project-tags">
-          <span>Transformers</span>
-          <span>PyTorch</span>
-          <span>RoPE</span>
-          <span>SwiGLU</span>
-          <span>SFT</span>
-          <span>Hugging Face</span>
-        </div>
-        <div class="project-links">
-          <a href="projects/2_project/">Read more</a>
-          <a href="https://github.com/bhushangolani/gpt-from-scratch" class="btn-github" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-          </a>
+        <div class="project-thumbnail agentic"><i class="fas fa-robot" aria-hidden="true"></i></div>
+        <div class="project-card-body">
+          <div class="project-course">AI Research &middot; University of Michigan</div>
+          <h3><a href="projects/3_project/">Multi-Agent AI Platform</a></h3>
+          <p>Configuration-driven multi-agent platform (OpenAI, Anthropic, Gemini, DeepSeek, Ollama). ChromaDB RAG, hybrid search, cross-encoder reranking, React UI.</p>
+          <div class="project-tags">
+            <span>Multi-Agent</span>
+            <span>RAG</span>
+            <span>ChromaDB</span>
+            <span>React</span>
+          </div>
+          <div class="project-links">
+            <a href="projects/3_project/">Read more</a>
+          </div>
         </div>
       </div>
+    </div>
 
+    <!-- Software -->
+    <h2 class="project-category">Software</h2>
+    <div class="projects-grid">
       <div class="project-card">
-        <div class="project-course">AI Research &middot; University of Michigan</div>
-        <h3><a href="projects/3_project/">Multi-Agent AI Platform</a></h3>
-        <p>
-          Architected a configuration-driven multi-agent platform unifying OpenAI, Anthropic,
-          Gemini, DeepSeek, and Ollama behind a single interface. Designed a ChromaDB vector
-          database with hybrid BM25+embedding search, reciprocal-rank fusion, and cross-encoder
-          reranking. Built a React-based UI for interactive multi-agent conversations.
-        </p>
-        <div class="project-tags">
-          <span>Multi-Agent AI</span>
-          <span>RAG</span>
-          <span>ChromaDB</span>
-          <span>React</span>
-          <span>LangChain</span>
-        </div>
-        <div class="project-links">
-          <a href="projects/3_project/">Read more</a>
+        <div class="project-thumbnail software"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+        <div class="project-card-body">
+          <div class="project-course">Web Systems</div>
+          <h3><a href="projects/5_project/">Client-Side Dynamic Page From Scratch</a></h3>
+          <p>Full-stack Instagram-like app (Insta485): React, Webpack, Flask REST API, SQLite. Posts, likes, comments, infinite scroll; pytest and Cypress.</p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>Flask</span>
+            <span>REST API</span>
+            <span>Webpack</span>
+          </div>
+          <div class="project-links">
+            <a href="projects/5_project/">Read more</a>
+            <a href="https://github.com/bhushangolani/Client-Side-Dynamic-Page-From-Scratch" class="btn-github" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
-
       <div class="project-card">
-        <div class="project-course">IIT Kharagpur &middot; Master's Thesis</div>
-        <h3><a href="projects/4_project/">e-Stethoscope: Cardiac Anomaly Detection</a></h3>
-        <p>
-          Architected a cardiac anomaly detection system using deep learning and audio from 5,000+
-          stethoscopes. Preprocessed audio using spectrograms and MFCCs for feature extraction.
-          Achieved 82.08% accuracy through CNNs for automated heart sound classification.
-        </p>
-        <div class="project-tags">
-          <span>Deep Learning</span>
-          <span>Audio Processing</span>
-          <span>CNN</span>
-          <span>MFCCs</span>
-        </div>
-        <div class="project-links">
-          <a href="projects/4_project/">Read more</a>
+        <div class="project-thumbnail software"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+        <div class="project-card-body">
+          <div class="project-course">Amazon &middot; Alexa Sensitive Content Intelligence</div>
+          <h3><a href="projects/6_project/">Feedback System &amp; Analytics</a></h3>
+          <p>ReactJS analytics app on ElasticSearch for data insights and feedback review. Scalable Java services (Lambda, ECS, DynamoDB); Bedrock-powered classification.</p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>AWS</span>
+            <span>ElasticSearch</span>
+            <span>Bedrock</span>
+          </div>
+          <div class="project-links">
+            <a href="projects/6_project/">Read more</a>
+          </div>
         </div>
       </div>
+    </div>
 
+    <!-- NLP -->
+    <h2 class="project-category">NLP</h2>
+    <div class="projects-grid">
       <div class="project-card">
-        <div class="project-course">Web Systems</div>
-        <h3><a href="projects/5_project/">Client-Side Dynamic Page From Scratch</a></h3>
-        <p>
-          Full-stack Instagram-like app (Insta485) with a client-side dynamic front end built from scratch.
-          React front end with Webpack and a Flask REST API backend with SQLite. Implements posts, likes,
-          comments, follows, and infinite scroll with pytest and Cypress tests.
-        </p>
-        <div class="project-tags">
-          <span>React</span>
-          <span>Flask</span>
-          <span>REST API</span>
-          <span>Webpack</span>
-          <span>SQLite</span>
-          <span>Cypress</span>
+        <div class="project-thumbnail nlp"><i class="fas fa-brain" aria-hidden="true"></i></div>
+        <div class="project-card-body">
+          <div class="project-course">EECS 595 &middot; NLP</div>
+          <h3><a href="projects/2_project/">GPT-style Language Model &amp; Conversational SFT</a></h3>
+          <p>GPT-style transformer from scratch: RoPE, SwiGLU, RMSNorm, causal self-attention. Pretraining on FineWeb-Edu; SFT for conversational agents with loss masking.</p>
+          <div class="project-tags">
+            <span>Transformers</span>
+            <span>PyTorch</span>
+            <span>RoPE</span>
+            <span>SFT</span>
+          </div>
+          <div class="project-links">
+            <a href="projects/2_project/">Read more</a>
+            <a href="https://github.com/bhushangolani/gpt-from-scratch" class="btn-github" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          </div>
         </div>
-        <div class="project-links">
-          <a href="projects/5_project/">Read more</a>
-          <a href="https://github.com/bhushangolani/Client-Side-Dynamic-Page-From-Scratch" class="btn-github" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-          </a>
+      </div>
+    </div>
+
+    <!-- Machine Learning -->
+    <h2 class="project-category">Machine Learning</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-thumbnail ml"><i class="fas fa-heart-pulse" aria-hidden="true"></i></div>
+        <div class="project-card-body">
+          <div class="project-course">IIT Kharagpur &middot; Master's Thesis</div>
+          <h3><a href="projects/4_project/">e-Stethoscope: Cardiac Anomaly Detection</a></h3>
+          <p>Deep learning on 5,000+ stethoscope recordings. Spectrograms and MFCCs; 82.08% accuracy with CNNs for automated heart sound classification.</p>
+          <div class="project-tags">
+            <span>Deep Learning</span>
+            <span>Audio</span>
+            <span>CNN</span>
+            <span>MFCCs</span>
+          </div>
+          <div class="project-links">
+            <a href="projects/4_project/">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumbnail ml"><i class="fas fa-draw-polygon" aria-hidden="true"></i></div>
+        <div class="project-card-body">
+          <div class="project-course">Computer Vision &middot; IIT Kharagpur</div>
+          <h3><a href="projects/7_project/">Line Detection in Engineering Drawings</a></h3>
+          <p>CV pipeline to digitize scanned engineering drawings: mesh removal (K-means), Canny edges, Hough transform; classify solid vs dashed lines (OpenCV, Python).</p>
+          <div class="project-tags">
+            <span>OpenCV</span>
+            <span>Computer Vision</span>
+            <span>Hough</span>
+            <span>Python</span>
+          </div>
+          <div class="project-links">
+            <a href="projects/7_project/">Read more</a>
+            <a href="https://github.com/bhushangolani/Line-detection-in-Engineering-drawing" class="btn-github" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          </div>
         </div>
       </div>
     </div>

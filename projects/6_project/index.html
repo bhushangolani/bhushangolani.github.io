@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback System & Analytics · Amazon | 👋 Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="/assets/favicon.svg?v=1" type="image/svg+xml">
+  <link rel="stylesheet" href="../../style.css?v=2">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../../index.html">About</a></li>
+        <li><a href="../../projects.html" class="active">Projects</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../cv.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Feedback System &amp; Analytics</h1>
+      <p>Amazon · Alexa Sensitive Content Intelligence</p>
+    </div>
+
+    <div class="project-page-content">
+      <p>
+        At Amazon, on the Alexa Sensitive Content Intelligence team, I built a <strong>ReactJS analytics application</strong> on ElasticSearch to give stakeholders data insights and a streamlined way to review and act on user and model feedback. The system supports high-throughput, low-latency queries over large volumes of content and feedback data, and integrates with the team’s cloud services and AI workflows.
+      </p>
+
+      <h2>Scalable Cloud Services</h2>
+      <p>
+        I developed scalable cloud services in Java using AWS Lambda, ECS, and DynamoDB, achieving 99.99% uptime and 50,000+ TPS. These services underpin the data pipeline that feeds the feedback and analytics app, so reviewers and product owners can search, filter, and analyze content and model outputs reliably at scale.
+      </p>
+
+      <h2>AI-Powered Classification and Workflows</h2>
+      <p>
+        I prompt-engineered a vision-enabled classification service using Amazon Bedrock (Claude Sonnet 3.5) for sentiment, compliance, and risk assessments. I also designed multimodal AI workflows that combine image retrieval and LLM reasoning with &lt;1s latency, so the feedback system can surface and prioritize items that need human review based on model scores and business rules.
+      </p>
+
+      <h2>Impact</h2>
+      <p>
+        The feedback review app and associated services enable the team to monitor model behavior, triage edge cases, and improve safety and quality of Alexa’s sensitive content handling. The combination of ElasticSearch-backed analytics and Bedrock-powered classification supports both operational review and data-driven iteration on models and policies.
+      </p>
+
+      <div class="project-links">
+        <a href="../../cv.html" class="btn-github">
+          <i class="fas fa-file-alt"></i> View full experience on CV
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

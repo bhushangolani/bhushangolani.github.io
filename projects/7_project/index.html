@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Line Detection in Engineering Drawings | 👋 Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="/assets/favicon.svg?v=1" type="image/svg+xml">
+  <link rel="stylesheet" href="../../style.css?v=2">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../../index.html">About</a></li>
+        <li><a href="../../projects.html" class="active">Projects</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../cv.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Line Detection in Engineering Drawings</h1>
+      <p>Computer Vision · Digitalization of engineering drawing papers</p>
+    </div>
+
+    <div class="project-page-content">
+      <p>
+        A <strong>computer vision</strong> pipeline to digitize scanned engineering drawing papers by detecting and classifying <strong>solid</strong> and <strong>dashed</strong> lines after removing the background mesh or grid. Built with OpenCV and Python for a project under Prof. Kaushal Bhagat (IIT Kharagpur).
+      </p>
+
+      <h2>Overview</h2>
+      <p>
+        Scanned engineering drawings often include a mesh or grid background that obscures line features. This project preprocesses such images, removes the mesh using clustering and thresholding, and applies edge detection followed by the <strong>Hough Line Transform</strong> to detect and visually distinguish solid lines (e.g., object outlines) from dashed lines (e.g., hidden or construction lines).
+      </p>
+
+      <h2>Pipeline</h2>
+      <p>
+        The pipeline loads and preprocesses the image, crops and splits it into question and answer regions, applies K-means (K=2) on pixel intensities in the question region to segment and remove the mesh, uses threshold-based cleanup in the answer region, then merges and binarizes. Gaussian blur and <strong>Canny edge detection</strong> with auto-computed thresholds follow; morphological operations (dilate and erode) reduce noise and connect broken edges. The <strong>Probabilistic Hough Line Transform</strong> detects line segments and classifies them by length (long → solid, short → dashed), with output drawn as solid lines in red and dashed in green.
+      </p>
+
+      <h2>Tech Stack</h2>
+      <p>
+        Python, OpenCV, NumPy, scikit-learn (K-means), and optional Matplotlib for visualization. The script was developed in Google Colab with optional display support for local runs.
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/bhushangolani/Line-detection-in-Engineering-drawing" class="btn-github" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
