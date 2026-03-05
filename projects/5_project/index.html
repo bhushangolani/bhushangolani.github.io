@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client-Side Dynamic Page From Scratch | Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../../index.html">about</a></li>
+        <li><a href="../../projects.html" class="active">projects</a></li>
+        <li><a href="../../publications.html">publications</a></li>
+        <li><a href="../../cv.html">cv</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Client-Side Dynamic Page From Scratch</h1>
+      <p>Web Systems · Instagram-like full-stack app</p>
+    </div>
+
+    <div class="project-page-content">
+      <p>
+        This project implements an Instagram-like social feed (Insta485) with a client-side dynamic front end built from scratch. The goal is to serve a single-page style experience where the UI is rendered and updated in the browser using React, while a Flask backend exposes a REST API and uses SQLite for data persistence.
+      </p>
+
+      <h2>Architecture</h2>
+      <p>
+        The backend is a Python Flask application that provides REST endpoints for posts, likes, comments, and user or follow operations. The database layer uses SQLite with schema and migrations in the repo. The front end is a React application (React 19 with TypeScript/JSX) bundled by Webpack. The client fetches JSON from the API and updates the DOM without full page reloads, giving a dynamic, app-like experience.
+      </p>
+
+      <h2>Tech Stack</h2>
+      <p>
+        The stack includes React and React DOM for the UI, Webpack and Babel for building and transpiling, and Flask, Jinja2, and SQLite on the server. Additional libraries such as dayjs and react-infinite-scroll-component support date handling and infinite scroll in the feed. Testing is done with pytest for the REST API and Cypress for end-to-end browser tests. ESLint and Prettier are used for code quality and formatting.
+      </p>
+
+      <h2>Deliverables</h2>
+      <p>
+        The repo contains the Flask app (insta485), React entry and components, SQL schema, run scripts in bin/, and test suites. Building the front end with <code>npm run build</code> and running the Flask server allows the full application to run locally. The project illustrates how to build a modern client-side dynamic experience from scratch without relying on a prebuilt app framework.
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/bhushangolani/Client-Side-Dynamic-Page-From-Scratch" class="btn-github" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
