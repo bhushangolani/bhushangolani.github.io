@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Bhushan Golani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Bhushan Golani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">about</a></li>
+        <li><a href="projects.html" class="active">projects</a></li>
+        <li><a href="publications.html">publications</a></li>
+        <li><a href="cv.html">cv</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>projects</h1>
+      <p>A selection of academic and research projects.</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-course">CSE 595 &middot; Course Project</div>
+        <h3>Child-Centered LLM Safety Evaluation &amp; Alignment</h3>
+        <p>
+          An end-to-end LLM safety pipeline for children (ages 6&ndash;12). Built a human-verified
+          dataset of child-style prompts based on the 4Cs framework. Benchmarked 10 open LLMs using
+          GPT-5 as an LLM-as-a-judge, scoring responses on safety, age-appropriateness, empathy,
+          and boundary-setting. Trained a safety classifier using XLM-RoBERTa and applied DPO for
+          child-centered alignment.
+        </p>
+        <div class="project-tags">
+          <span>LLM Safety</span>
+          <span>NLP</span>
+          <span>DPO</span>
+          <span>PyTorch</span>
+          <span>Transformers</span>
+          <span>XLM-RoBERTa</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/bhushangolani/child-llm-safety" class="btn-github" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-course">EECS 595 &middot; NLP</div>
+        <h3>GPT-style Language Model &amp; Conversational SFT</h3>
+        <p>
+          Implemented a GPT-style transformer in PyTorch from scratch with multi-head causal
+          self-attention, Rotary Position Embeddings (RoPE), SwiGLU feed-forward layers, and RMSNorm.
+          Built a scalable pretraining pipeline on FineWeb-Edu and designed a supervised fine-tuning
+          (SFT) framework for conversational agents with selective loss masking.
+        </p>
+        <div class="project-tags">
+          <span>Transformers</span>
+          <span>PyTorch</span>
+          <span>RoPE</span>
+          <span>SwiGLU</span>
+          <span>SFT</span>
+          <span>Hugging Face</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/bhushangolani/gpt-from-scratch" class="btn-github" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-course">AI Research &middot; University of Michigan</div>
+        <h3>Multi-Agent AI Platform</h3>
+        <p>
+          Architected a configuration-driven multi-agent platform unifying OpenAI, Anthropic,
+          Gemini, DeepSeek, and Ollama behind a single interface. Designed a ChromaDB vector
+          database with hybrid BM25+embedding search, reciprocal-rank fusion, and cross-encoder
+          reranking. Built a React-based UI for interactive multi-agent conversations.
+        </p>
+        <div class="project-tags">
+          <span>Multi-Agent AI</span>
+          <span>RAG</span>
+          <span>ChromaDB</span>
+          <span>React</span>
+          <span>LangChain</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-course">IIT Kharagpur &middot; Master's Thesis</div>
+        <h3>e-Stethoscope: Cardiac Anomaly Detection</h3>
+        <p>
+          Architected a cardiac anomaly detection system using deep learning and audio from 5,000+
+          stethoscopes. Preprocessed audio using spectrograms and MFCCs for feature extraction.
+          Achieved 82.08% accuracy through CNNs for automated heart sound classification.
+        </p>
+        <div class="project-tags">
+          <span>Deep Learning</span>
+          <span>Audio Processing</span>
+          <span>CNN</span>
+          <span>MFCCs</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bhushan Golani. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
