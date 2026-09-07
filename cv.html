@@ -79,6 +79,20 @@
         <h2>Experience</h2>
         <div class="cv-timeline">
           <div class="cv-timeline-item">
+            <span class="cv-timeline-date">May 2026 &ndash; Aug 2026</span>
+            <div class="cv-timeline-body">
+              <h3>Graduate Software Engineer Intern</h3>
+              <p class="cv-timeline-place">Rivian Volkswagen Technologies &middot; Smart Vehicle Diagnostics Team &middot; Palo Alto, CA</p>
+              <ul>
+                <li>Created a generative-UI pipeline turning agent answers into structured, actionable UI instead of raw chat text.</li>
+                <li>Extended the http-bridge microservice's single SSE endpoint with an outputMode parameter, letting technicians toggle between 2 modes (genUI/text) on 1 endpoint with zero breaking changes to existing text clients.</li>
+                <li>Opened an ACP session between http-bridge and a LangGraph ACP server, issuing session/prompt calls that averaged 7 tool calls per turn against upstream services, streamed back to the bridge as session/update events.</li>
+                <li>Buffered answer segments from the agent and forwarded them to a second LLM (Claude Sonnet) for markdown-to-JSONL UI-spec transformation, adding under 1s of incremental latency per segment, streaming genUI patches back.</li>
+                <li>Persisted each turn's structured UI spec (avg 3,000 characters) to Aurora PostgreSQL, delivering a single-stop actionable answer that cut technician triage time by 50%+.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
             <span class="cv-timeline-date">Jul 2025 &ndash; Present</span>
             <div class="cv-timeline-body">
               <h3>AI Research Engineer</h3>
